@@ -1,8 +1,8 @@
 import { initialData } from './modules/data.js';
 import { routeUser } from './modules/events.js';
-import { displayBooks } from './modules/functions.js';
-import { createBook } from './modules/functions.js';
+import { createBook, displayBooks } from './modules/functions.js';
 import { booksData } from './modules/bookList.js';
+import { luxon } from './modules/luxon.js';
 
 const form = document.querySelector('#form');
 const title = document.querySelector('#title');
@@ -15,7 +15,6 @@ const addNewRoute = document.querySelector('#add-new-route');
 const contactRoute = document.querySelector('#contact-route');
 const date = document.querySelector('.date');
 const sections = [bookListSection, formSection, contactInfoSection];
-
 
 window.onload = () => {
   booksData.data = JSON.parse(localStorage.getItem('myLocalData' || '[]'));
@@ -44,3 +43,10 @@ booksRoute.addEventListener('click', (event) => routeUser(event, sections));
 addNewRoute.addEventListener('click', (event) => routeUser(event, sections));
 contactRoute.addEventListener('click', (event) => routeUser(event, sections));
 
+const displayTime = () => {
+  date.innerText = luxon.DateTime.now().toLocaleString(
+    luxon.DateTime.DATETIME_MED_WITH_SECONDS
+  );
+  setTimeout(displayTime, 1000);
+};
+displayTime();

@@ -25,7 +25,6 @@ export const displayBooks = (book) => {
   ul.appendChild(li);
 };
 
-
 export const createBook = (title, author) => {
   if ((title, author)) {
     return new Book(title, author);
