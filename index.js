@@ -1,4 +1,4 @@
-import { initialData } from './modules/data.js';
+import initialData from './modules/data.js';
 import { routeUser } from './modules/events.js';
 import { createBook, displayBooks } from './modules/functions.js';
 import { booksData } from './modules/bookList.js';
@@ -45,7 +45,7 @@ contactRoute.addEventListener('click', (event) => routeUser(event, sections));
 
 const displayTime = () => {
   date.innerText = luxon.DateTime.now().toLocaleString(
-    luxon.DateTime.DATETIME_MED_WITH_SECONDS
+    luxon.DateTime.DATETIME_MED_WITH_SECONDS,
   );
   setTimeout(displayTime, 1000);
 };

@@ -1,6 +1,6 @@
 import { booksData } from './bookList.js';
 import { displayBooks } from './functions.js';
-import { initialData } from './data.js';
+import initialData from './data.js';
 
 export const updateLocalStorage = () => {
   booksData.data = JSON.parse(localStorage.getItem('myLocalData' || '[]'));
@@ -15,11 +15,10 @@ export const updateLocalStorage = () => {
 
 export const routeUser = (event, arr) => {
   const listItems = document.querySelectorAll('.nav-list-item');
-  console.log(event.target);
   const targetIndex = Array.from(listItems).indexOf(event.target);
   const targetSection = arr[targetIndex];
   const displayedSection = arr.filter(
-    (clickedSection) => !clickedSection.classList.contains('d-none')
+    (clickedSection) => !clickedSection.classList.contains('d-none'),
   );
   if (displayedSection[0] === targetSection) {
     return;
