@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <meta
+      name="description"
+      content="Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list. By building this application, we will learn how to manage data using JavaScript. Thanks to that our website will be more interactive. We will also use a medium-fidelity wire-frame to build the UI."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Wikimedia-logo.png/480px-Wikimedia-logo.png"
+    />
+    <title>Awesome Books - ES6 version</title>
+  </head>
+  <body>
+    <header>
+      <div class="heading">
+        <h2 class="heading-title">Awesome books</h2>
+        <nav>
+          <ul class="navbar">
+            <li class="nav-list-item" id="books-route">List</li>
+
+            <li class="nav-list-item" id="add-new-route">Add New</li>
+
+            <li class="nav-list-item" id="contact-route">Contact</li>
+          </ul>
+        </nav>
+      </div>
+      <span class="date"></span>
+    </header>
+
+    <section class="home">
+      <div id="book-list-section" class="BookCollection">
+        <div class="header">
+          <h1>All Awesome Books</h1>
+        </div>
+
+        <ul class="book-list"></ul>
+      </div>
+
+      <div class="form" id="form-section">
+        <div class="header">
+          <h1>Form Header</h1>
+        </div>
+        <form id="form" method="post" action="/">
+          <input
+            placeholder="Title"
+            type="text"
+            required
+            name="title"
+            id="title"
+          />
+          <input
+            placeholder="Author"
+            type="text"
+            required
+            name="author"
+            id="author"
+          />
+          <input type="submit" value="Add" id="add-button" />
+        </form>
+      </div>
+
+      <div id="contact-info-section">
+        <div class="header">
+          <h1>Contact Information</h1>
+        </div>
+        <p>
+          If you have any questions or you just want to say "Hello". You can
+          reach us to.
+        </p>
+        <ul>
+          <li class="social-links">Our email: <a href="#">mail@mail.com</a></li>
+          <li class="social-links">
+            Our twitter: <a href="#">@awesomeBooks</a>
+          </li>
+          <li class="social-links">
+            Our github: <a href="#">@awesomeBooks</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <h2>Copyright &copy;</h2>
+      </div>
+    </footer>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
